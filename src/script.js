@@ -40,6 +40,7 @@ const getDetails = (cityName, lat, lon) => {
     .then(response => response.json())
     .then(result => {
       const days = [];
+      console.log(result);
       const weatherdata = result.list.filter(data => {
         const forecast = new Date(data.dt_txt).getDate();
         if (!days.includes(forecast)) {
